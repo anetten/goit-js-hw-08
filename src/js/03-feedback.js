@@ -16,11 +16,7 @@ function handleInputChange() {
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }
 
-const saveFormData = throttle(formData => {
-  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
-}, 500);
-
-emailInput.addEventListener('input', handleInputChange);
+emailInput.addEventListener('input', throttle(handleIntupChange, 500));
 messageInput.addEventListener('input', handleInputChange);
 
 const savedFormData = localStorage.getItem('feedback-form-state');
