@@ -26,7 +26,7 @@ if (savedFormData) {
   messageInput.value = parsedData.message;
 }
 
-feedbackForm.addEventListener('submit', function (event) {
+form.addEventListener('submit', function (event) {
   event.preventDefault();
   const formData = {
     email: emailInput.value,
