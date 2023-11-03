@@ -6,7 +6,7 @@ const iframe = document.getElementById('vimeo-player');
 const player = new Player(iframe);
 
 function getItemStorage() {
-  const savedTime = localStorage.getItem(STORAGE_KEY);
+  const savedTime = localStorage.getItem(STORAGE_KEY) || 0;
   return savedTime;
 }
 
